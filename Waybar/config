@@ -5,8 +5,8 @@
     // "width": 1280, // Waybar width
     "spacing": 12, // Gaps between modules (15px) Includes spacing between the monitor borders. Seems to effect spacing between monitor borders, but only when the tray module is being used, maybe cause it's invisible when it's inactive, so the spacing still effects the modules to the left of it?
     // Setting waybar margins
-    "margin-left": 20,
-    "margin-right": 20,
+    "margin-left": 15,
+    "margin-right": 15,
     "margin-top": 10,
     "margin-bottom": 0, // So the only margin is the one from the windows
     // Choose the order of the modules
