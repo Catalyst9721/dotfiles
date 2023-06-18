@@ -1,5 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
+    color: #ff9baa
     font-family: "Cascadia Code";
     font-size: 16px;
     font-weight: 600;
@@ -43,9 +44,9 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 10px;
+    padding: 0 12px;
     background-color: #1c1928; /*##282832;*/
     color: #ffffff;
-    border-radius: 5px;
-    border: 2px solid /*#4e76c8;*/ #6397ff;
+    border-radius: 8px;
+    border: 2px solid /*#4e76c8;*/ #ff9baa;
 }
