@@ -6,18 +6,10 @@
     "margin-bottom": 0,
     "margin-left": 0,
     "margin-right": 0,
-    "modules-left": ["custom/launcher", "pulseaudio", "custom/playerctl", "custom/playerlabel"],
-    "modules-center": ["wlr/workspaces"],
-    "modules-right": ["network", "cpu", "memory", "clock"],
-
-
-
-    //--------------------------------------------------------------------------------
-    //
+    "modules-left": ["custom/launcher", "wlr/workspaces", "custom/playerctl", "custom/playerlabel"],
+    "modules-center": ["cpu", "memory"],
+    "modules-right": ["network", "pulseaudio", "clock"],
     // Modules configuration
-    //
-    //--------------------------------------------------------------------------------
-
 	"clock": {
 		"format": " {:%H:%M}",
 		"tooltip": "true",
@@ -79,14 +71,15 @@
     "cpu": {
         "format": "󰻠 {usage}%",
         "format-alt": "󰻠 {avg_frequency} GHz",
-        "interval": 5,
+        "interval": 5
     },
 
 	"network": {
         "format-wifi": "󰤨",
-        "format-ethernet": " {ipaddr}/{cidr}",
-        "format-linked": "  (No IP)",
+        "format-ethernet": " {ifname}: Spaaaaaaace",
+        "format-linked": " {ifname} (No IP)",
         "format-disconnected": "󰤭",
+        "format-alt": " {ifname}: {ipaddr}/{cidr}",
         "tooltip-format": "{essid}",
 	},
 
@@ -97,12 +90,13 @@
 			"default": ["󰕿", "󰖀", "󰕾"]
 		},
         "scroll-step": 5,
-		"on-click": "pavucontrol"
+		"on-click-right": "pavucontrol"
     },
-
     "custom/launcher": {
-        "format": "",
-        // Don't know what to use this for, will think of something eventually, maybe... Looks nice on the bar just as a little icon.
-        "on-click": "waylock & systemctl suspend"
+        "format": "󰈸",
+        "on-click": "bash $HOME/.config/rofi/launcher.sh",
+        // "on-click": "wofi --show drun -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css",
+        "on-click-right": "bash $HOME/.config/rofi/run.sh"  
+        // "on-click-right": "wofi --show run -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css"  
     },
 }
